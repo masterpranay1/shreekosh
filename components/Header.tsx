@@ -1,26 +1,142 @@
-import React from 'react';
-import Image from 'next/image';
+"use client";
+import React from "react";
+import Image from "next/image";
+import Logo from "../public/logo.png";
 import { IoMenuSharp } from "react-icons/io5";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 
-const Header = () => {
+const Navbar = () => {
+  const navItems = [
+    {
+      name: "Home",
+      link: "/",
+      key: "home",
+    },
+    {
+      name: "About",
+      link: "#about",
+      key: "about",
+    },
+    {
+      name: "Solution",
+      link: "#solution",
+      key: "solution",
+    },
+    {
+      name: "Mission and Vision",
+      link: "#mission-and-vision",
+      key: "mission-and-vision",
+    },
+    {
+      name: "Our USP",
+      link: "#our-usp",
+      key: "our-usp",
+    },
+  ];
+
+  const [activeIndex, setActiveIndex] = React.useState("home");
+
   return (
-    <div className='container pt-6'>
-      <div className='flex justify-between items-center'>
-        <Image src="/Screenshot 2024-03-02 202051.png"
-          width={100} height={100} alt="logo" />
-      
-        <ul className="md:flex hidden gap-8 items-center front-semibold text-[16px] ">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <button className='bg-black text-white px-6 rounded-3xl'>Sigh Up</button>
-        
-        </ul>
-
-        <IoMenuSharp className='md:hidden text-black' size={30} />
-      </div>
+    <div className="hidden md:flex items-center gap-8 lg:gap-16 mx-auto">
+      {navItems.map((item, index) => (
+        <Link
+          href={item.link}
+          key={item.key}
+          className={cn([
+            "flex relative",
+            "text-slate-400 hover:text-slate-700 font-bold cursor-pointer",
+            activeIndex === item.key && "text-slate-800",
+            "hover:-translate-y-0.5 transition-all",
+          ])}
+        >
+          {item.name}
+          {activeIndex === item.key && (
+            <span className="w-1.5 h-1.5 bg-teal-600 rounded-full absolute -bottom-2 left-[49%]"></span>
+          )}
+        </Link>
+      ))}
     </div>
   );
 };
 
-export default Header
+const NavbarMobile = () => {
+  const navItems = [
+    {
+      name: "Home",
+      link: "/",
+      key: "home",
+    },
+    {
+      name: "About",
+      link: "#about",
+      key: "about",
+    },
+    {
+      name: "Solution",
+      link: "#solution",
+      key: "solution",
+    },
+    {
+      name: "Mission and Vision",
+      link: "#mission-and-vision",
+      key: "mission-and-vision",
+    },
+    {
+      name: "Our USP",
+      link: "#our-usp",
+      key: "our-usp",
+    },
+  ];
+
+  const [activeIndex, setActiveIndex] = React.useState("home");
+
+  return (
+    <div className="md:hidden flex flex-col items-center gap-8 lg:gap-16 mx-auto bg-white py-8">
+      {navItems.map((item, index) => (
+        <Link
+          href={item.link}
+          key={item.key}
+          className={cn([
+            "flex relative",
+            "text-slate-400 hover:text-slate-700 font-bold cursor-pointer",
+            activeIndex === item.key && "text-slate-800",
+            "hover:-translate-y-0.5 transition-all",
+          ])}
+        >
+          {item.name}
+          {activeIndex === item.key && (
+            <span className="w-1.5 h-1.5 bg-teal-600 rounded-full absolute -bottom-2 left-[49%]"></span>
+          )}
+        </Link>
+      ))}
+    </div>
+  );
+};
+
+const Header = () => {
+  const [isNavOpen, setIsNavOpen] = React.useState(false);
+
+  return (
+    <div>
+      <div className="flex items-center p-4 bg-white">
+        <Image
+          src={Logo}
+          width={100}
+          height={100}
+          alt="logo"
+          className="w-24 h-12 bg-white p-2 rounded-xl border border-slate-600"
+        />
+        <Navbar />
+        <IoMenuSharp
+          className="md:hidden text-black ml-auto"
+          size={30}
+          onClick={() => setIsNavOpen(!isNavOpen)}
+        />
+      </div>
+      {isNavOpen && <NavbarMobile />}
+    </div>
+  );
+};
+
+export default Header;
