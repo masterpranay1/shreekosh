@@ -119,7 +119,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className="flex items-center p-4 bg-white">
+      <div className="flex items-center p-4 bg-white shadow">
         <Image
           src={Logo}
           width={100}
