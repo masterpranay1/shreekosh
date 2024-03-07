@@ -19,9 +19,9 @@ const Navbar = () => {
       key: "about",
     },
     {
-      name: "Solution",
-      link: "#solution",
-      key: "solution",
+      name: "Our USP",
+      link: "#our-usp",
+      key: "our-usp",
     },
     {
       name: "Mission and Vision",
@@ -29,9 +29,9 @@ const Navbar = () => {
       key: "mission-and-vision",
     },
     {
-      name: "Our USP",
-      link: "#our-usp",
-      key: "our-usp",
+      name: "Contact Us",
+      link: "#contact-us",
+      key: "contact-us",
     },
   ];
 
@@ -73,9 +73,9 @@ const NavbarMobile = () => {
       key: "about",
     },
     {
-      name: "Solution",
-      link: "#solution",
-      key: "solution",
+      name: "Our USP",
+      link: "#our-usp",
+      key: "our-usp",
     },
     {
       name: "Mission and Vision",
@@ -83,9 +83,9 @@ const NavbarMobile = () => {
       key: "mission-and-vision",
     },
     {
-      name: "Our USP",
-      link: "#our-usp",
-      key: "our-usp",
+      name: "Contact Us",
+      link: "#contact-us",
+      key: "contact-us",
     },
   ];
 
