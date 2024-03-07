@@ -12,7 +12,7 @@ export default function Home() {
       </section>
 
       {/* Mission and Vision */}
-      <section className="min-h-screen flex flex-col gap-8">
+      <section className="min-h-screen flex flex-col gap-8" id="mission-and-vision">
         <Vision />
         <Mission />
       </section>
