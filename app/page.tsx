@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import Mission from "@/components/Mission";
 import Vision from "@/components/Vision";
 import About from "@/components/About";
+import USPTitle from "@/components/USPTitle";
+import USPCards from "@/components/USPCards";
 
 export default function Home() {
   return (
@@ -13,19 +15,27 @@ export default function Home() {
       </section>
 
       {/* Mission and Vision */}
-      <section className="min-h-screen flex flex-col gap-8" id="mission-and-vision">
+      <section
+        className="min-h-screen flex flex-col gap-8"
+        id="mission-and-vision"
+      >
         <Vision />
         <Mission />
       </section>
-    
 
-    {/*About us */}
+      {/*About us */}
       <section className="min-h-screen flex flex-col gap-8" id="About">
-        <About/>
+        <About />
+      </section>
+
+      {/* Our USP */}
+      <section
+        className="min-h-screen bg-gray-100 flex flex-col gap-8"
+        id="our-usp"
+      >
+        <USPTitle />
+        <USPCards />
       </section>
     </main>
   );
-        
-  
-  
 }
