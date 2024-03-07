@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Mission: React.FC = () => {
   return (
-    <div className="flex justify-center items-center bg-white py-12">
+    <div className="flex justify-center items-center bg-white py-24">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row-reverse items-center">
           <div className="lg:w-1/2">
@@ -18,7 +18,7 @@ const Mission: React.FC = () => {
               className="mx-auto"
             />
           </div>
-          <div className="lg:w-1/2 lg:pl-24 my-8``">
+          <div className="lg:w-1/2 lg:pl-24 my-8 flex flex-col md:p-12">
             <h1 className="text-4xl md:text-5xl font-bold text-center md:text-left mb-8 text-teal-400">
               Our Mission
             </h1>

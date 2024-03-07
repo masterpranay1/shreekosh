@@ -18,7 +18,7 @@ const Vision: React.FC = () => {
               className="mx-auto"
             />
           </div>
-          <div className="lg:w-1/2 lg:pl-8 my-8 flex flex-col">
+          <div className="lg:w-1/2 lg:pl-8 my-8 flex flex-col md:p-12">
             <h1 className="text-4xl md:text-5xl font-bold text-center md:text-left mb-8 text-teal-400">
               Our Vision
             </h1>
