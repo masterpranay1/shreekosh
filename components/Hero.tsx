@@ -46,6 +46,7 @@ const Hero = () => {
           alt="Surgery Image"
           height={400}
           width={600}
+          unoptimized
           className="rounded-xl h-96 w-96 z-10  hover:translate-x-2 hover:translate-y-2 transition-all"
         />
         <div className="hidden lg:block absolute w-96 h-96 bg-gray-600 blur-sm translate-x-4 translate-y-4 rounded-xl"></div>

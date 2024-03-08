@@ -126,6 +126,7 @@ const Header = () => {
             width={100}
             height={100}
             alt="logo"
+            unoptimized
             className="w-24 h-12 bg-white p-2 rounded-xl border border-slate-600"
           />
         </Link>

@@ -12,6 +12,7 @@ const Vision: React.FC = () => {
           <div className="lg:w-1/2">
             <Image
               src={VisionImage}
+              unoptimized
               alt="Vision"
               width={500}
               height={500}

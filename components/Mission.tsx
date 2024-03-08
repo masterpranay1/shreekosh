@@ -15,6 +15,7 @@ const Mission: React.FC = () => {
               alt="Vision"
               width={500}
               height={500}
+              unoptimized
               className="mx-auto"
             />
           </div>

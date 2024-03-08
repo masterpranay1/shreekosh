@@ -13,6 +13,7 @@ const About: React.FC = () => {
               alt="Vision"
               width={500}
               height={500}
+              unoptimized
               className="mx-auto h-64 md:h-96 rounded"
             />
           </div>
