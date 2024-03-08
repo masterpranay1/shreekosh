@@ -31,7 +31,7 @@ const Vision: React.FC = () => {
             </p>
 
             <Button asChild className="w-1/2 mx-auto lg:mx-0 bg-teal-500 hover:bg-teal-400 mt-8 py-2 rounded">
-              <Link href="/about" className="text-xl text-white">Learn More</Link>
+              <Link href="#" className="text-xl text-white">Learn More</Link>
             </Button>
           </div>
         </div>
