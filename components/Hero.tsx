@@ -3,6 +3,7 @@ import Image from "next/image";
 import SurgeryImage from "@/public/pexels-gaspar-osorio-15771808.jpg";
 import { Sparkle } from "lucide-react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -33,8 +34,9 @@ const Hero = () => {
         <Button
           className="bg-teal-400 hover:bg-teal-500 hover:-translate-y-1 text-white rounded px-8 w-full mt-8 md:w-fit"
           size={"lg"}
+          asChild
         >
-          Enquire Now
+          <Link href="/enquiry-form">Enquire Now</Link>
         </Button>
       </div>
 
@@ -46,9 +48,7 @@ const Hero = () => {
           width={600}
           className="rounded-xl h-96 w-96 z-10  hover:translate-x-2 hover:translate-y-2 transition-all"
         />
-        <div className="hidden lg:block absolute w-96 h-96 bg-gray-600 blur-sm translate-x-4 translate-y-4 rounded-xl">
-
-        </div>
+        <div className="hidden lg:block absolute w-96 h-96 bg-gray-600 blur-sm translate-x-4 translate-y-4 rounded-xl"></div>
       </div>
     </section>
   );
