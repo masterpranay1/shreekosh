@@ -23,11 +23,6 @@ export default function Home() {
         <Mission />
       </section>
 
-      {/*About us */}
-      <section className="min-h-screen flex flex-col gap-8" id="About">
-        <About />
-      </section>
-
       {/* Our USP */}
       <section
         className="min-h-screen bg-gray-100 flex flex-col gap-8"
@@ -35,6 +30,11 @@ export default function Home() {
       >
         <USPTitle />
         <USPCards />
+      </section>
+
+      {/*About us */}
+      <section className="min-h-screen flex flex-col" id="about">
+        <About />
       </section>
     </main>
   );
