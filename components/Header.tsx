@@ -15,22 +15,22 @@ const Navbar = () => {
     },
     {
       name: "About",
-      link: "#about",
+      link: "/#about",
       key: "about",
     },
     {
       name: "Our USP",
-      link: "#our-usp",
+      link: "/#our-usp",
       key: "our-usp",
     },
     {
       name: "Mission and Vision",
-      link: "#mission-and-vision",
+      link: "/#mission-and-vision",
       key: "mission-and-vision",
     },
     {
       name: "Contact Us",
-      link: "#contact-us",
+      link: "/#contact-us",
       key: "contact-us",
     },
   ];
@@ -69,22 +69,22 @@ const NavbarMobile = () => {
     },
     {
       name: "About",
-      link: "#about",
+      link: "/#about",
       key: "about",
     },
     {
       name: "Our USP",
-      link: "#our-usp",
+      link: "/#our-usp",
       key: "our-usp",
     },
     {
       name: "Mission and Vision",
-      link: "#mission-and-vision",
+      link: "/#mission-and-vision",
       key: "mission-and-vision",
     },
     {
       name: "Contact Us",
-      link: "#contact-us",
+      link: "/#contact-us",
       key: "contact-us",
     },
   ];
@@ -120,16 +120,18 @@ const Header = () => {
   return (
     <div>
       <div className="flex items-center p-4 bg-white shadow">
-        <Image
-          src={Logo}
-          width={100}
-          height={100}
-          alt="logo"
-          className="w-24 h-12 bg-white p-2 rounded-xl border border-slate-600"
-        />
+        <Link href="/">
+          <Image
+            src={Logo}
+            width={100}
+            height={100}
+            alt="logo"
+            className="w-24 h-12 bg-white p-2 rounded-xl border border-slate-600"
+          />
+        </Link>
         <Navbar />
         <IoMenuSharp
-          className="md:hidden text-black ml-auto"
+          className="md:hidden text-black ml-auto cursor-pointer"
           size={30}
           onClick={() => setIsNavOpen(!isNavOpen)}
         />
