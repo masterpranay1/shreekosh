@@ -24,7 +24,7 @@ const About: React.FC = () => {
             </h1>
 
             <p className="text-lg md:text-2xl mb-4 text-slate-400 lg:w-3/4">
-                          Varek Pharmasol "Shrikosh" aims to revolutionize healthcare supply chain management by ensuring timely delivery,
+                          Varek Pharmasol Shrikosh aims to revolutionize healthcare supply chain management by ensuring timely delivery,
                           diverse product range, and convenience. With a focus on rural markets initially, the company plans to expand nationwide,
                           ensuring accessibility and affordability of healthcare products across India.
             </p>
