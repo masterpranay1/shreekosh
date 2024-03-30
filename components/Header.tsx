@@ -51,9 +51,9 @@ const Navbar = () => {
           ])}
         >
           {item.name}
-          {activeIndex === item.key && (
+          {/* {activeIndex === item.key && (
             <span className="w-1.5 h-1.5 bg-teal-600 rounded-full absolute -bottom-2 left-[49%]"></span>
-          )}
+          )} */}
         </Link>
       ))}
     </div>
@@ -118,7 +118,7 @@ const Header = () => {
   const [isNavOpen, setIsNavOpen] = React.useState(false);
 
   return (
-    <div>
+    <div className="sticky top-0 z-50">
       <div className="flex items-center p-4 bg-white shadow">
         <Link href="/">
           <Image

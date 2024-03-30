@@ -9,8 +9,9 @@ import USPCards from "@/components/USPCards";
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
+      <Header />
+
       <section className="bg-gray-100 min-h-screen">
-        <Header />
         <Hero />
       </section>
 
@@ -25,7 +26,7 @@ export default function Home() {
 
       {/* Our USP */}
       <section
-        className="min-h-screen bg-gray-100 flex flex-col gap-8"
+        className="min-h-screen bg-gray-100 flex flex-col gap-8 pt-8"
         id="our-usp"
       >
         <USPTitle />
