@@ -95,7 +95,6 @@ const EnquiryForm = () => {
 export default function Enquiry() {
   return (
     <section className="h-screen w-full bg-gray-100">
-      <Header />
       <section className="w-full bg-gray-100 p-8">
         <h1 className="text-teal-400 text-4xl font-extrabold text-center">
           Enquire Now
