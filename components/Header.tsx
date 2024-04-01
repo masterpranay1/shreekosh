@@ -1,93 +1,81 @@
 "use client";
-import React from "react";
+import React, { useEffect, useMemo } from "react";
 import Image from "next/image";
 import Logo from "../public/logo.png";
 import { IoMenuSharp } from "react-icons/io5";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
+
+const useNavData = () => {
+  const navItems = useMemo(() => {
+    return [
+      {
+        name: "Home",
+        link: "/",
+        key: "home",
+      },
+      {
+        name: "About Us",
+        link: "/#about",
+        key: "about",
+      },
+      {
+        name: "Careers",
+        link: "/careers",
+        key: "careers",
+      },
+      {
+        name: "Gallery",
+        link: "/gallery",
+        key: "gallery",
+      },
+    ];
+  }, []);
+
+  return { navItems };
+};
 
 const Navbar = () => {
-  const navItems = [
-    {
-      name: "Home",
-      link: "/",
-      key: "home",
-    },
-    {
-      name: "About",
-      link: "/#about",
-      key: "about",
-    },
-    {
-      name: "Our USP",
-      link: "/#our-usp",
-      key: "our-usp",
-    },
-    {
-      name: "Mission and Vision",
-      link: "/#mission-and-vision",
-      key: "mission-and-vision",
-    },
-    {
-      name: "Contact Us",
-      link: "/#contact-us",
-      key: "contact-us",
-    },
-  ];
+  const { navItems } = useNavData();
 
   const [activeIndex, setActiveIndex] = React.useState("home");
 
   return (
-    <div className="hidden md:flex items-center gap-8 lg:gap-16 mx-auto">
-      {navItems.map((item, index) => (
-        <Link
-          href={item.link}
-          key={item.key}
-          className={cn([
-            "flex relative",
-            "text-slate-400 hover:text-slate-700 font-bold cursor-pointer",
-            activeIndex === item.key && "text-slate-800",
-            "hover:-translate-y-0.5 transition-all",
-          ])}
-        >
-          {item.name}
-          {/* {activeIndex === item.key && (
-            <span className="w-1.5 h-1.5 bg-teal-600 rounded-full absolute -bottom-2 left-[49%]"></span>
-          )} */}
-        </Link>
-      ))}
+    <div className="hidden md:flex items-center justify-center gap-8 lg:gap-16 w-full">
+      <div className="flex flex-row gap-8 lg:gap-16 ml-auto">
+        {navItems.map((item, index) => (
+          <Link
+            href={item.link}
+            key={item.key}
+            className={cn([
+              "flex items-center justify-center relative",
+              "text-slate-400 hover:text-slate-700 font-semibold cursor-pointer",
+              activeIndex === item.key && "text-teal-500 hover:text-teal-600",
+              "hover:-translate-y-0.5 transition-all",
+            ])}
+            onClick={() => setActiveIndex(item.key)}
+          >
+            {item.name}
+            {activeIndex === item.key && (
+              <span className="w-4 h-1 bg-teal-600 rounded-full absolute -bottom-2"></span>
+            )}
+          </Link>
+        ))}
+      </div>
+
+      <Button
+        className="bg-teal-500 hover:bg-teal-600 rounded text-white ml-auto"
+        asChild
+      >
+        <Link href="/enquiry-form">Enquire Now</Link>
+      </Button>
     </div>
   );
 };
 
 const NavbarMobile = () => {
-  const navItems = [
-    {
-      name: "Home",
-      link: "/",
-      key: "home",
-    },
-    {
-      name: "About",
-      link: "/#about",
-      key: "about",
-    },
-    {
-      name: "Our USP",
-      link: "/#our-usp",
-      key: "our-usp",
-    },
-    {
-      name: "Mission and Vision",
-      link: "/#mission-and-vision",
-      key: "mission-and-vision",
-    },
-    {
-      name: "Contact Us",
-      link: "/#contact-us",
-      key: "contact-us",
-    },
-  ];
+  const { navItems } = useNavData();
 
   const [activeIndex, setActiveIndex] = React.useState("home");
 
@@ -99,10 +87,11 @@ const NavbarMobile = () => {
           key={item.key}
           className={cn([
             "flex relative",
-            "text-slate-400 hover:text-slate-700 font-bold cursor-pointer",
+            "text-slate-400 hover:text-slate-700 cursor-pointer font-semibold",
             activeIndex === item.key && "text-slate-800",
             "hover:-translate-y-0.5 transition-all",
           ])}
+          onClick={() => setActiveIndex(item.key)}
         >
           {item.name}
           {activeIndex === item.key && (
@@ -123,11 +112,11 @@ const Header = () => {
         <Link href="/">
           <Image
             src={Logo}
-            width={100}
-            height={100}
+            width={500}
+            height={500}
             alt="logo"
             unoptimized
-            className="w-24 h-12 bg-white p-2 rounded-xl border border-slate-600"
+            className="w-32 bg-white px-2 rounded-xl border-slate-600"
           />
         </Link>
         <Navbar />
