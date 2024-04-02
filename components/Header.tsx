@@ -108,7 +108,7 @@ const Header = () => {
 
   return (
     <div className="sticky top-0 z-50">
-      <div className="flex items-center p-4 bg-white shadow">
+      <div className="flex items-center p-4 bg-white/30 shadow backdrop-blur-sm">
         <Link href="/">
           <Image
             src={Logo}
@@ -116,7 +116,7 @@ const Header = () => {
             height={500}
             alt="logo"
             unoptimized
-            className="w-32 bg-white px-2 rounded-xl border-slate-600"
+            className="w-32 p-2"
           />
         </Link>
         <Navbar />
