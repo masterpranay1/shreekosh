@@ -50,8 +50,8 @@ const Navbar = () => {
             key={item.key}
             className={cn([
               "flex items-center justify-center relative",
-              "text-slate-400 hover:text-slate-700 font-semibold cursor-pointer",
-              activeIndex === item.key && "text-teal-500 hover:text-teal-600",
+              "text-slate-800 hover:text-slate-700 font-semibold cursor-pointer",
+              activeIndex === item.key && "text-teal-700 hover:text-teal-600",
               "hover:-translate-y-0.5 transition-all",
             ])}
             onClick={() => setActiveIndex(item.key)}
