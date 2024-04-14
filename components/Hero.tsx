@@ -7,49 +7,49 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="px-12 py-24 lg:p-24 flex flex-row">
-      <div className="w-full md:w-1/2">
-        <h1 className="text-4xl font-extrabold leading-8 w-full md:w-8/12 md:text-4xl lg:text-5xl">
-          Revolutionizing Healthcare Supply Chain in{" "}
-          <span className="text-teal-500">Rural India</span>
+    <section className="px-4 py-12 lg:px-24 lg:py-16 xl:px-32 flex flex-row">
+      <div className="w-full flex flex-col items-center gap-8">
+        <h1 className="uppercase text-5xl font-extrabold w-full md:w-8/12 lg:text-6xl xl:text-7xl text-center flex flex-col items-center text-slate-700">
+          <span>Simplifying</span>
+          <span>Healthcare</span>
+          <span className="text-teal-600">Supply Chain</span>
         </h1>
 
-        <ul className="my-8 text-sm md:text-base flex flex-col gap-2 text-slate-600">
-          <li className="flex flex-row items-start gap-2">
-            <Sparkle size={24} />
-            <span>Guaranteed 24-Hour Delivery</span>
-          </li>
+        <p className="text-center text-lg lg:text-xl text-slate-500 max-w-md lg:max-w-lg">
+          Shreekosh by Varek Pharmasol: Ensuring Guaranteed 24-Hour Delivery,
+          Wide Variety of Medicines, and Flexible Cash Trade for pharmacies
+          nationwide.
+        </p>
 
-          <li className="flex flex-row items-start gap-2">
-            <Sparkle size={24} />
-            <span>Wide Variety of Brands</span>
-          </li>
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8">
+          <Button
+            className="bg-teal-400 hover:bg-teal-500 text-white rounded-full text-lg px-8 w-full md:w-72"
+            size={"lg"}
+            asChild
+          >
+            <Link href="/enquiry-form">Enquire Now</Link>
+          </Button>
 
-          <li className="flex flex-row items-start gap-2">
-            <Sparkle size={24} />
-            <span>Flexible Cash Trade</span>
-          </li>
-        </ul>
+          <Button
+            className="bg-white border-2 border-teal-500 hover:bg-teal-500 text-slate-800 hover:text-white rounded-full text-lg px-8 w-full md:w-72"
+            size={"lg"}
+            asChild
+            variant={"outline"}
+          >
+            <Link href="/enquiry-form">Explore How We Works</Link>
+          </Button>
+        </div>
 
-        <Button
-          className="bg-teal-400 hover:bg-teal-500 hover:-translate-y-1 text-white rounded px-8 w-full mt-8 md:w-fit"
-          size={"lg"}
-          asChild
+        <video
+          className="w-full rounded-xl md:mt-8"
+          autoPlay
+          loop
+          muted
+          // playsInline
+          // controls
         >
-          <Link href="/enquiry-form">Enquire Now</Link>
-        </Button>
-      </div>
-
-      <div className="hidden md:flex justify-center md:w-1/2 relative">
-        <Image
-          src={SurgeryImage}
-          alt="Surgery Image"
-          height={400}
-          width={600}
-          unoptimized
-          className="rounded-xl h-96 w-96 z-10  hover:translate-x-2 hover:translate-y-2 transition-all"
-        />
-        <div className="hidden lg:block absolute w-96 h-96 bg-gray-600 blur-sm translate-x-4 translate-y-4 rounded-xl"></div>
+          <source src="/promo-video.mp4" type="video/mp4" />
+        </video>
       </div>
     </section>
   );

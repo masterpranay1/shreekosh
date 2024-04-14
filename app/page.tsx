@@ -11,7 +11,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col">
       {/* <Header /> */}
 
-      <section className="bg-gray-100 min-h-screen">
+      <section className="min-h-screen">
         <Hero />
       </section>
 
