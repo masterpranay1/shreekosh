@@ -51,36 +51,36 @@ const EnquiryForm = () => {
 
   return (
     <form
-      className="flex flex-col mt-12 mx-auto max-w-96"
+      className="flex flex-col mt-12 mx-auto max-w-96 bg-white"
       action={handleSubmit}
     >
       <Input
         type="text"
         placeholder="Name"
         name="Name"
-        className="p-4 md:p-8 text-lg my-2 bg-white border-0 rounded placeholder:text-slate-400"
+        className="p-4 md:p-8 text-lg my-2 bg-white shadow-sm text-teal-800 border rounded placehohite"
       />
       <Input
         type="email"
         placeholder="Email"
         name="Email"
-        className="p-4 md:px-8  my-2 text-lg bg-white border-0 rounded placeholder:text-slate-400"
+        className="p-4 md:p-8 text-lg my-2 bg-white text-teal-800 border rounded placehohite"
       />
       <Input
         type="text"
         placeholder="Phone"
         name="Number"
-        className="p-4 md:px-8  my-2 text-lg bg-white border-0 rounded placeholder:text-slate-400"
+        className="p-4 md:p-8 text-lg my-2 bg-white text-teal-800 border rounded placehohite"
       />
       <Textarea
         placeholder="Query"
         name="Query"
-        className="p-4 md:px-8  my-2 text-lg bg-white border-0 rounded placeholder:text-slate-400"
+        className="p-4 md:p-8 text-lg my-2 bg-white text-teal-800 border rounded placehohite"
       />
 
       <Button
         type="submit"
-        className="bg-teal-400 hover:bg-teal-500 hover:-translate-y-1 text-white rounded px-8 w-full mt-8"
+        className="bg-teal-400 hover:bg-teal-500 text-teal-50 rounded-xl px-8 w-full mt-8 text-xl"
         size={"lg"}
         onClick={() => {
           setLoading(true);
@@ -94,10 +94,10 @@ const EnquiryForm = () => {
 
 export default function Enquiry() {
   return (
-    <section className="h-screen w-full bg-gray-100">
-      <section className="w-full bg-gray-100 p-8">
-        <h1 className="text-teal-400 text-4xl font-extrabold text-center">
-          Enquire Now
+    <section className="w-full bg-dot-teal-800/[0.3] border-y">
+      <section className="w-full p-8 md:p-12">
+        <h1 className="text-teal-800 text-4xl font-extrabold text-center">
+          Enquire Now 🤝 
         </h1>
         <EnquiryForm />
       </section>
