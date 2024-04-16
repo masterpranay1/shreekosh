@@ -57,8 +57,8 @@ const Card = ({
   description: string;
 }) => {
   return (
-    <div className="p-4 px-8 rounded flex flex-col gap-4 min-w-64 lg:min-w-72 xl:min-w-80">
-      <h4 className="px-2 text-4xl font-extrabold text-teal-800">{subtitle}</h4>
+    <div className="p-4 px-8 rounded flex flex-col gap-4 min-w-64 lg:min-w-72 xl:min-w-80 max-w-[50rem]">
+      <h4 className="text-4xl font-extrabold text-teal-800">{subtitle}</h4>
 
       <div className="flex flex-row gap-4 items-center">
         {icon}
@@ -109,7 +109,7 @@ export default function WhyRetailersChooseUs() {
         {data.map((item, index) => (
           <li
             key={index}
-            className="border border-slate-200 basis-full md:basis-1/3 lg:basis-1/4 rounded-xl"
+            className="border border-slate-200 basis-full md:basis-1/3 lg:basis-1/4 rounded-xl flex-1 relative pb-8 overflow-hidden"
           >
             <Card
               icon={icons[index]}
@@ -117,6 +117,8 @@ export default function WhyRetailersChooseUs() {
               subtitle={`0${index + 1}`}
               description={item.description}
             />
+
+            <div className="absolute w-full h-2 bg-teal-800 bottom-0"></div>
           </li>
         ))}
       </ul>
