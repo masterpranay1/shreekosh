@@ -1,10 +1,4 @@
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Mission from "@/components/Mission";
-import Vision from "@/components/Vision";
-import About from "@/components/About";
-import USPTitle from "@/components/USPTitle";
-import USPCards from "@/components/USPCards";
 import CompanyList from "./components/CompanyList";
 import WhyRetailersChooseUs from "./components/WhyRetailersChooseUs";
 import HowWeWork from "./components/HowWeWork";
@@ -13,8 +7,6 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
-      {/* <Header /> */}
-
       <section className="min-h-screen">
         <Hero />
       </section>
@@ -42,8 +34,6 @@ export default function Home() {
       >
         <HowWeWork />
       </section>
-
-      <Footer />
     </main>
   );
 }

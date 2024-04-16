@@ -7,6 +7,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { SidebarCloseIcon, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const useNavData = () => {
   const navItems = useMemo(() => {
@@ -18,7 +19,7 @@ const useNavData = () => {
       },
       {
         name: "About Us",
-        link: "/#about",
+        link: "/about",
         key: "about",
       },
       {
@@ -41,6 +42,15 @@ const Navbar = () => {
   const { navItems } = useNavData();
 
   const [activeIndex, setActiveIndex] = React.useState("home");
+
+  const path = usePathname();
+
+  useEffect(() => {
+    const activeItem = navItems.find((item) => item.link === path);
+    if (activeItem) {
+      setActiveIndex(activeItem.key);
+    }
+  }, [path]);
 
   return (
     <div className="hidden md:flex items-center justify-center gap-8 lg:gap-16 w-full bg-white">
@@ -105,7 +115,9 @@ const NavbarMobile = () => {
         className="bg-teal-500 hover:bg-teal-600 rounded-full w-1/2 text-white text-xl py-4"
         asChild
       >
-        <Link href="/enquiry-form" className="py-4">Enquire Now</Link>
+        <Link href="/enquiry-form" className="py-4">
+          Enquire Now
+        </Link>
       </Button>
     </div>
   );
