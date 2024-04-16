@@ -85,10 +85,19 @@ const Navbar = () => {
   );
 };
 
-const NavbarMobile = () => {
+const NavbarMobile = ({ closeNav }: { closeNav: () => void }) => {
   const { navItems } = useNavData();
 
   const [activeIndex, setActiveIndex] = React.useState("home");
+
+  const path = usePathname();
+
+  useEffect(() => {
+    const activeItem = navItems.find((item) => item.link === path);
+    if (activeItem) {
+      setActiveIndex(activeItem.key);
+    }
+  }, [path]);
 
   return (
     <div className="md:hidden absolute w-full h-screen overflow-hidden flex flex-col items-center gap-16 lg:gap-16 mx-auto bg-white py-8 pt-20 px-4">
@@ -126,6 +135,12 @@ const NavbarMobile = () => {
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = React.useState(false);
 
+  const path = usePathname();
+
+  useEffect(() => {
+    setIsNavOpen(false);
+  }, [path]);
+
   return (
     <div className="sticky top-0 z-50 border-b md:border-b-0 bg-white">
       <div className="flex items-center px-8 lg:px-24 xl:px-32">
@@ -157,7 +172,7 @@ const Header = () => {
           />
         )}
       </div>
-      {isNavOpen && <NavbarMobile />}
+      {isNavOpen && <NavbarMobile closeNav={() => setIsNavOpen(false)} />}
     </div>
   );
 };
