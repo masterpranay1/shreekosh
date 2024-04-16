@@ -8,6 +8,7 @@ import USPCards from "@/components/USPCards";
 import CompanyList from "./components/CompanyList";
 import WhyRetailersChooseUs from "./components/WhyRetailersChooseUs";
 import HowWeWork from "./components/HowWeWork";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -41,6 +42,8 @@ export default function Home() {
       >
         <HowWeWork />
       </section>
+
+      <Footer />
     </main>
   );
 }
