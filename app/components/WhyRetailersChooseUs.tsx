@@ -94,7 +94,7 @@ export default function WhyRetailersChooseUs() {
           className="bg-teal-600 text-white hover:bg-teal-700 rounded-xl px-8"
           asChild
         >
-          <Link href="/contact">Contact Us</Link>
+          <Link href="/enquiry-form">Contact Us</Link>
         </Button>
         <Button
           variant={"link"}

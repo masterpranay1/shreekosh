@@ -30,7 +30,7 @@ export default function Home() {
 
       <section
         className="px-4 lg:px-24 xl:px-32 flex flex-col gap-8 md:gap-12 lg:gap-16 xl:gap-20 py-16 md:py-20 lg:py-24 bg-teal-50 border-y"
-        id="why-retailer-choose-us"
+        id="how-we-works"
       >
         <HowWeWork />
       </section>

@@ -17,7 +17,7 @@ const EndingHero = () => {
         className="bg-teal-800 hover:bg-teal-700 text-white rounded-xl px-4 w-full mt-4 text-xl"
         asChild
       >
-        <Link href="/contact">Contact us</Link>
+        <Link href="/enquiry-form">Contact us</Link>
       </Button>
     </section>
   );

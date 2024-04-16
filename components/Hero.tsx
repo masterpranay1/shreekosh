@@ -36,7 +36,7 @@ const Hero = () => {
             asChild
             variant={"outline"}
           >
-            <Link href="/enquiry-form">Explore How We Works</Link>
+            <Link href="/#how-we-works">Explore How We Works</Link>
           </Button>
         </div>
 
