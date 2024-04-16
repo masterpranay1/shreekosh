@@ -73,11 +73,11 @@ export default function WhyRetailersChooseUs() {
   const data = useData();
 
   const icons = [
-    <Warehouse className="w-12 h-12 bg-green-100 text-green-800 p-2 rounded-xl" />,
-    <ClipboardCheck className="w-12 h-12 bg-cyan-100 text-cyan-800 p-2 rounded-xl" />,
-    <Container className="w-12 h-12 bg-violet-100 text-violet-800 p-2 rounded-xl" />,
-    <Timer className="w-12 h-12 bg-amber-100 text-amber-800 p-2 rounded-xl" />,
-    <Handshake className="w-12 h-12 bg-blue-100 text-blue-800 p-2 rounded-xl" />,
+    <Warehouse className="w-12 h-12 bg-green-100 text-green-800 p-2 rounded-xl" key="warehouse"/>,
+    <ClipboardCheck className="w-12 h-12 bg-cyan-100 text-cyan-800 p-2 rounded-xl" key="clipboard"/>,
+    <Container className="w-12 h-12 bg-violet-100 text-violet-800 p-2 rounded-xl" key="container"/>,
+    <Timer className="w-12 h-12 bg-amber-100 text-amber-800 p-2 rounded-xl" key="timer"/>,
+    <Handshake className="w-12 h-12 bg-blue-100 text-blue-800 p-2 rounded-xl" key="handhshake"/>,
   ];
 
   return (

@@ -60,7 +60,7 @@ export default function HowWeWork() {
       </h2>
       <p className="text-center w-80 md:w-[30rem] md:text-xl lg:text-2xl text-slate-400">
         At ShreeKosh, transparency and efficiency define our operational ethos.
-        Here's a glimpse into our streamlined process:
+        Here&apos;s a glimpse into our streamlined process:
       </p>
 
       <div className="flex flex-row gap-8 w-full mt-12 min-h-[50vh]">
