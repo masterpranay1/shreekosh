@@ -25,7 +25,7 @@ const Vision: React.FC = () => {
             </h1>
 
             <p className="text-lg md:text-2xl mb-4 text-slate-400 text-justify lg:text-left">
-              Shrikosh's vision is to revolutionize the Indian healthcare
+              Shrikosh&apos;s vision is to revolutionize the Indian healthcare
               landscape by building a stronger and more reliable healthcare
               ecosystem. We are committed to continuous improvement, fostering
               strong partnerships with pharmacies, and leveraging innovation to

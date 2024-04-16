@@ -40,7 +40,7 @@ const Mission: React.FC = () => {
             </h1>
 
             <p className="text-lg md:text-2xl mb-4 text-slate-400 lg:w-3/4 text-justify lg:text-left">
-              Shrikosh's mission is to empower pharmacies across India, both in
+              Shrikosh&apos;s mission is to empower pharmacies across India, both in
               rural and urban areas, by providing a streamlined and efficient
               healthcare supply chain solution. We strive to ensure timely
               delivery of a diverse range of high-quality medicines at
