@@ -16,7 +16,7 @@ const Vision: React.FC = () => {
               alt="Vision"
               width={500}
               height={500}
-              className="mx-auto"
+              className="mx-auto rounded-xl"
             />
           </div>
           <div className="lg:w-1/2 lg:pl-8 my-8 flex flex-col md:p-12">
