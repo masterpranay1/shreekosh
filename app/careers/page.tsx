@@ -16,7 +16,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface JobPosition {
   job_title: string;
@@ -26,7 +26,7 @@ interface JobPosition {
   link: string;
 }
 
-export const columns: ColumnDef<JobPosition>[] = [
+const columns: ColumnDef<JobPosition>[] = [
   {
     accessorKey: "job_title",
     header: "Job Title",
@@ -70,7 +70,7 @@ interface DataTableProps<TData, TValue> {
   data: TData[];
 }
 
-export function DataTable<TData, TValue>({
+function DataTable<TData, TValue>({
   columns,
   data,
 }: DataTableProps<TData, TValue>) {
