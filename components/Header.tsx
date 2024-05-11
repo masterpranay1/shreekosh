@@ -142,7 +142,7 @@ const Header = () => {
   }, [path]);
 
   return (
-    <div className="sticky top-0 z-50 border-b md:border-b-0 bg-white">
+    <div className="sticky top-0 z-50 border-b bg-white">
       <div className="flex items-center px-8 lg:px-24 xl:px-32">
         <Link href="/">
           <Image
